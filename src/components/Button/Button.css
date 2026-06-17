@@ -1,0 +1,23 @@
+.button {
+    background-color: #00a8ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0, 168, 255, 0.3);
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 168, 255, 0.5);
+}
+
+.button:active {
+    transform: translateY(1px) scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 168, 255, 0.3);
+}

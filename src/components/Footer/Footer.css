@@ -1,0 +1,210 @@
+
+@keyframes footer-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: rgba(5, 7, 45, 0.85);
+  border-top: 0.5px solid rgba(59, 130, 246, 0.2);
+  padding: 0 40px;
+  animation: footer-in 0.8s ease both;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+/* ── Linha principal ────────────────────────────────────────── */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 0 22px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Logo (coluna esquerda) ─────────────────────────────────── */
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.footer__logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(59, 130, 246, 0.4);
+  flex-shrink: 0;
+}
+
+.footer__logo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.title span {
+  color: #3b82f6;
+}
+
+.footer__tagline {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Suporte (coluna central) ───────────────────────────────── */
+.Cards {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 0.5px solid rgba(59, 130, 246, 0.15);
+  border-radius: 12px;
+}
+
+.Cards::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.Cards:hover::before {
+  left: 150%; /* varre da esquerda pra direita */
+}
+
+.Cards:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border: 0.5px solid rgba(59, 130, 246, 0.15);
+  border-color: #3b5bff;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(26, 75, 255, 0.35);
+}
+
+.Cards:active {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 4px 12px rgba(26, 75, 255, 0.2);
+}
+
+
+.subtitle {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 2px;
+}
+
+.Cards p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cards__divider {
+  width: 24px;
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Redes sociais (coluna direita) ─────────────────────────── */
+.Cards-rede-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Copyright ──────────────────────────────────────────────── */
+.copyright {
+  padding: 12px 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(248, 226, 226);
+  letter-spacing: 0.02em;
+}
+
+/* ── Responsivo ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 24px 0 18px;
+  }
+
+  .footer__logo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Cards {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 20px;
+  }
+
+  .Cards-rede-social {
+    align-items: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer {
+    animation: none;
+  }
+}

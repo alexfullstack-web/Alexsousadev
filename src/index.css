@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap");
+
+/* ─── TOKENS (herda do design system principal) ─────────────────── */
+:root {
+  --blue: #1a4bff;
+  --blue-glow: #1a4bff66;
+  --blue-dim: #1a4bff22;
+  --blue-light: #4d73ff;
+  --accent: #00d4ff;
+  --bg: #04050f;
+  --bg-card: #0b0d1f;
+  --bg-card2: #0f1228;
+  --border: #1a2040;
+  --text: #e8eaf6;
+  --text-muted: #8892b0;
+  --white: #ffffff;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-head: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --shadow: 0 0 40px rgba(26, 75, 255, 0.18);
+  --glow: 0 0 60px rgba(26, 75, 255, 0.35);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background-image: url("./assets/fundo6.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+footer {
+  margin-top: auto; 
+}
