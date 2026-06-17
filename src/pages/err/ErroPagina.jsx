@@ -1,4 +1,4 @@
-import "./ErroPagina.css";
+import "./Erropagina.css";
 
 export default function ErroPagina() {
   return (
