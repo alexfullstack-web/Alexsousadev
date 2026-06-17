@@ -4,7 +4,7 @@ import Label from "../../components/Label/Label";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import Loading from "../../components/loading/loading";
-import Notification from "../../components/notification/Notification";
+import Notification from "../../components/Notification/Notification";
 import Logo from "./../../assets/logo.jpeg";
 import { useState } from "react";
 import "./Login.css";
