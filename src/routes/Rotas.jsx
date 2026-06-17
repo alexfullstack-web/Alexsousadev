@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Login from "../pages/Login/Login"
+import Login from "../pages/Login/Login";
 import ErroPagina from "../pages/err/ErroPagina"
 
 export default function Rotas(){
