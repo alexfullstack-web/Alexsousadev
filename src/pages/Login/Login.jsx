@@ -49,7 +49,7 @@ function Login() {
 
       <main className="login">
         <Form className="form-login" onSubmit={homeLogin}>
-          <img className="logo" src={Logo} alt="Logo AlexSousaDev" />
+          <img className="logo-login" src={Logo} alt="Logo AlexSousaDev" />
 
           <h2 className="title-login">
             Alex<span>Sousa</span>Dev

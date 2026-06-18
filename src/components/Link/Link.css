@@ -1,83 +1,17 @@
-.link {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  margin-left: 50px;
-  border-radius: 20px;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 0.5px solid rgba(59, 130, 246, 0.15);
-  cursor: pointer;
-
-  /* animações */
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background-color 0.25s ease,
-    border-color 0.25s ease;
-  position: relative;
-  overflow: hidden;
+.links{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 6px;
+    cursor: pointer;
 }
 
-/* brilho que varre o card no hover */
-.link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.08) 50%,
-    transparent 100%
-  );
-  transform: skewX(-20deg);
-  transition: left 0.5s ease;
-  pointer-events: none;
+.links:hover{
+    color: #00a8ff;
 }
 
-.link:hover::before {
-  left: 150%; /* varre da esquerda pra direita */
-}
-
-.link:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border: 0.5px solid rgba(59, 130, 246, 0.15);
-  border-color: #3b5bff;
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(26, 75, 255, 0.35);
-}
-
-.link:active {
-  transform: translateY(-1px) scale(1.01);
-  box-shadow: 0 4px 12px rgba(26, 75, 255, 0.2);
-}
-
-/* ícone sobe levemente no hover */
-.icon {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.25s ease;
-}
-
-.link:hover .icon {
-  transform: translateY(-3px) scale(1.1);
-}
-
-/* texto clareia no hover */
-.links {
-  text-decoration: none;
-  color: #b8bbc2;
-  font-size: 14px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  transition: color 0.25s ease;
-}
-
-.link:hover .links {
-  color: #fff;
+.icon{
+    width: 35px;
+    
 }

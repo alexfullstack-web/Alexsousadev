@@ -11,7 +11,7 @@ export default function Footer() {
 
         {/* Logo */}
         <div className="footer__logo">
-          <img src={Logo} alt="Logo AlexSousaDev" />
+          <img className="logo-footer" src={Logo} alt="Logo AlexSousaDev" />
           <div className="footer__logo-info">
             <h1 className="title">
               Alex<span>Sousa</span>Dev
